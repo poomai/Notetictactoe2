@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Note tic tac toe</string>
+    <string name="human">เล่นกับคน</string>
+    <string name="com">เล่นกับคอม</string>
+    <string name="easy">ง่าย</string>
+    <string name="medium">ปานกลาง</string>
+    <string name="hard">ยาก</string>
+</resources>
