@@ -16,6 +16,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
             {R.id.btn3x31, R.id.btn3x32, R.id.btn3x33}};
     private boolean aBoolean = true; // Value True ==> first User Choose
     private String tag = "30AprilV1";
+    private int timesAnInt = 1;
 
 
     @Override
@@ -78,10 +79,59 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
         Log.d(tag, "indexX ==> " + indexX);
         Log.d(tag, "indexY ==> " + indexy);
 
+        int x1 = 0, y1 = 0, x2, y2, x3, y3, x4, y4;
+
+
+        switch (timesAnInt) {
+            case 1:
+
+                x1 = indexX;
+                y1 = indexy;
+
+                if ((indexX == 1) && (indexy == 1)) {
+                    writeXOonButton(buttons[0][0], "O");
+                } else {
+                    writeXOonButton(buttons[1][1], "O");
+                }
+                break;
+            case 2:
+
+                calculateByComTime2(x1, y1, indexX, indexy);
+
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
 
 
 
-    }
+    }   // calculateByCom
+
+    private void calculateByComTime2(int x1, int y1, int indexX, int indexY) {
+
+        //For (0,0)
+
+
+        //For (0,1)
+
+        //For (0,2)
+
+        //For (1,0)
+
+        //For (1,1)
+
+        //For (1,2)
+
+        //For (2,0)
+
+        //For (2,1)
+
+        //For (2,2)
+
+    }   // calculate
+
 
     private void writeXOonButton(Button btnClick, String strXO) {
 
