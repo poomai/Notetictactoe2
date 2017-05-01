@@ -203,7 +203,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
         Log.d(tag, "indexX ==> " + indexX);
         Log.d(tag, "inDexY ==> " + indexy);
 
-        //For (0,0) จุดแรกที่เลือก (0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
+        //For (0,0) จุดแรกที่เลือก  จุดที่สองที่เป็นไปได้(0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
         if ((x1 == 0) && (y1 == 0)) {
 
             if ((x2 == 0) && (y2 == 1)) {
@@ -233,11 +233,45 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                     showAlert("AI");
                 }
 
+            }   // if2
+
+            if ((x2 == 0) && (y2 == 2)) {
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[1][0], "O");
+                }
+
             }
 
-        }
+
+
+        }   // if1
 
         // For (0,1)จุดแรกที่เลือก  (0,0), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
+
+
+
+
 
         // For (0,2)จุดแรกที่เลือก  (0,0), (0,1), (1,2), (2,2), (2,1), (2,0), (1,0)
 
@@ -308,24 +342,52 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
         }   // if1
 
 
-        //For (0,1)
+        //For (0,1) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
         if ((x1 == 0) && (y1 == 1)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[0][2], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[0][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
         }
 
-        //For (0,2)
+        //For (0,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (1,2), (2,2), (2,1), (2,0), (1,0)
         if ((x1 == 0) && (y1 == 2)) {
         }
 
-        //For (1,0)
+        //For (1,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (2,2), (2,1), (2,0), (1,0)
 
+        //For (2,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,1), (2,0), (1,0)
 
-        //For (1,2)
+        //For (2,1) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,0), (1,0)
 
-        //For (2,0)
+        //For (2,0) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,1), (1,0)
 
-        //For (2,1)
-
-        //For (2,2)
+        //For (1,0) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,1), (2,0)
 
     }   // calculate
 
