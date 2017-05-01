@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.momotaro.notetictactoe.Hard2Play3x3">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn3x11"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x12"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x13"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn3x21"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x22"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x23"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn3x31"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x32"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+            <Button
+                android:id="@+id/btn3x33"
+                android:layout_width="@dimen/h0"
+                android:layout_height="@dimen/h0"
+                android:textSize="@dimen/h1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
