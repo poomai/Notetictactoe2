@@ -15,8 +15,9 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
             {R.id.btn3x21, R.id.btn3x22, R.id.btn3x23},
             {R.id.btn3x31, R.id.btn3x32, R.id.btn3x33}};
     private boolean aBoolean = true; // Value True ==> first User Choose
-    private String tag = "30AprilV1";
+
     private int timesAnInt = 1;
+    private int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 
 
     @Override
@@ -74,10 +75,10 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
     private void calculateByCom(int indexX, int indexy, int inttimes) {
 
-        Log.d(tag, "indexX ==> " + indexX);
-        Log.d(tag, "indexY ==> " + indexy);
+        Log.d("30AprilV1", "intTime ==> " + inttimes);
+        Log.d("30AprilV1", "indexX ==> " + indexX);
+        Log.d("30AprilV1", "indexY ==> " + indexy);
 
-        int x1 = 0, y1 = 0, x2, y2, x3, y3, x4, y4;
 
 
         switch (inttimes) {
@@ -95,23 +96,85 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 break;
             case 2: // นี่คือการคลิกครั้งที่ สอง
 
+                x2 = indexX;
+                y2 = indexy;
+
                 calculateByComTime2(x1, y1, indexX, indexy);
 
                 break;
             case 3:
+
+                calculateByComTime3(x1, y1, x2, y2, indexX, indexy);
+
                 break;
             case 4:
                 break;
         }
 
 
-
     }   // calculateByCom
+
+    private void calculateByComTime3(int x1, int y1, int x2, int y2, int indexX, int indexy) {
+
+        String tag = "1MayV1";
+
+        Log.d(tag, "x1 ==> " + x1);
+        Log.d(tag, "y1 ==> " + y1);
+        Log.d(tag, "x2 ==> " + x2);
+        Log.d(tag, "y2 ==> " + y2);
+        Log.d(tag, "indexX ==> " + indexX);
+        Log.d(tag, "inDexY ==> " + indexy);
+
+        //For (0,0) จุดแรกที่เลือก (0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
+        if ((x1 == 0) && (y1 == 0)) {
+
+            if ((x2 == 0) && (y2 == 1)) {
+                //คลิกครั้งที่สาม (1,2), (2,2), (2,1), (2,0), (1,0)
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+                if ((indexX == 2) && (indexy == 0)) {
+                    writeXOonButton(buttons[1][0], "O");
+                }
+
+                if ((indexX == 1) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+            }
+
+        }
+
+        // For (0,1)จุดแรกที่เลือก  (0,0), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
+
+        // For (0,2)จุดแรกที่เลือก  (0,0), (0,1), (1,2), (2,2), (2,1), (2,0), (1,0)
+
+        // For (1,2)จุดแรกที่เลือก
+
+        // For (2,2)จุดแรกที่เลือก
+
+        // For (2,1)จุดแรกที่เลือก
+
+        // For (2,0)จุดแรกที่เลือก
+
+        // For (1,0)จุดแรกที่เลือก
+
+    }   // calculate
 
     private void calculateByComTime2(int x1, int y1, int indexX, int indexY) {
 
         //For (0,0) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
-        if ((x1 == 0) && ( y1 == 0)) {
+        if ((x1 == 0) && (y1 == 0)) {
 
             if ((indexX == 0) && (indexY == 1)) {
                 writeXOonButton(buttons[0][2], "O");
@@ -145,15 +208,14 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
 
         //For (0,1)
-        if ((x1 == 0) && ( y1 == 1)) {
+        if ((x1 == 0) && (y1 == 1)) {
         }
 
         //For (0,2)
-        if ((x1 == 0) && ( y1 == 2)) {
+        if ((x1 == 0) && (y1 == 2)) {
         }
 
         //For (1,0)
-
 
 
         //For (1,2)
