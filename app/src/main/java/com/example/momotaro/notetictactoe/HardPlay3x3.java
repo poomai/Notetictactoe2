@@ -299,7 +299,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
     }   // calculate
 
-    private void showAlert(String strWin) {
+    private void showAlert(final String strWin) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(HardPlay3x3.this);
         builder.setTitle("The Winner");
@@ -308,10 +308,17 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                //Restart Activity
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
+                if (strWin.equals("AI")) {
+
+                    Intent intent = new Intent(HardPlay3x3.this, Hard2Play3x3.class);
+                    startActivity(intent);
+
+                } else {
+                    //Restart Activity
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
 
             }
         });

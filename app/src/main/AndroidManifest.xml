@@ -20,7 +20,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SelectMode" />
         <activity android:name=".HardPlay3x3" />
-        <activity android:name=".EasyPlay3x3"></activity>
+        <activity android:name=".EasyPlay3x3" />
+        <activity android:name=".Hard2Play3x3"></activity>
     </application>
 
 </manifest>
