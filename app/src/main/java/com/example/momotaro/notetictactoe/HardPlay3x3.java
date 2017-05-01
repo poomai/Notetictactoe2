@@ -407,6 +407,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
     private void writeXOonButton(Button btnClick, String strXO) {
 
         btnClick.setText(strXO);
+        btnClick.setClickable(false);
 
     }   // writeX
 
