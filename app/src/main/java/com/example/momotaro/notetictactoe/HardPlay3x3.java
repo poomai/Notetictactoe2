@@ -153,9 +153,21 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
                 }
 
-            }
+            }   // if2
 
             if ((x2 == 0) && (y2 == 2)) {
+
+                if ((x3 == 2) && (y3 == 1)) {
+
+                    if ((indexX == 1) && (indexy == 2)) {
+                        showAlert("ไม่มี");
+                    } else {
+                        writeXOonButton(buttons[1][2], "O");
+                        showAlert("AI");
+                    }
+
+                }
+
             }
 
             if ((x2 == 1) && (y2 == 2)) {
@@ -173,7 +185,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
             if ((x2 == 1) && (y2 == 0)) {
             }
 
-        }
+        }   // if1
 
         //For (0,1)
 
