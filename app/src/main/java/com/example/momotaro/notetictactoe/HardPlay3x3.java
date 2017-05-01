@@ -1,5 +1,8 @@
 package com.example.momotaro.notetictactoe;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,7 +20,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
     private boolean aBoolean = true; // Value True ==> first User Choose
 
     private int timesAnInt = 1;
-    private int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+    private int x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0;
 
 
     @Override
@@ -104,15 +107,90 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 break;
             case 3:
 
+                x3 = indexX;
+                y3 = indexy;
+
                 calculateByComTime3(x1, y1, x2, y2, indexX, indexy);
 
                 break;
             case 4:
+
+                calculateByComTime4(x1, y1, x2, y2, x3, y3, indexX, indexy);
+
                 break;
         }
 
 
     }   // calculateByCom
+
+    private void calculateByComTime4(int x1, int y1, int x2, int y2, int x3, int y3, int indexX, int indexy) {
+
+        String tag = "1MayV2";
+
+        Log.d(tag, "x1 ==> " + x1);
+        Log.d(tag, "y1 ==> " + y1);
+        Log.d(tag, "x2 ==> " + x2);
+        Log.d(tag, "y2 ==> " + y2);
+        Log.d(tag, "x3 ==> " + x3);
+        Log.d(tag, "y3 ==> " + y3);
+        Log.d(tag, "indexX ==> " + indexX);
+        Log.d(tag, "inDexY ==> " + indexy);
+
+        //For (0,0)
+        //จุดที่สอง (0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
+        if ((x1 == 0) && ( y1 == 0)) {
+
+            if ((x2 == 0) && (y2 == 1)) {
+
+                if ((x3 == 2) && (y3 == 0)) {
+
+                    if ((indexX == 1) && (indexy == 2)) {
+                        showAlert(" ไม่มี ");
+                    } else {
+                        writeXOonButton(buttons[1][2], "O");
+                        showAlert("AI");
+                    }
+
+                }
+
+            }
+
+            if ((x2 == 0) && (y2 == 2)) {
+            }
+
+            if ((x2 == 1) && (y2 == 2)) {
+            }
+
+            if ((x2 == 2) && (y2 == 2)) {
+            }
+
+            if ((x2 == 2) && (y2 == 1)) {
+            }
+
+            if ((x2 == 2) && (y2 == 0)) {
+            }
+
+            if ((x2 == 1) && (y2 == 0)) {
+            }
+
+        }
+
+        //For (0,1)
+
+        //For (0,2)
+
+        //For (1,2)
+
+        //For (2,2)
+
+        //For (2,1)
+
+        //For (2,0)
+
+        //For (1,0)
+
+
+    }   // calculate
 
     private void calculateByComTime3(int x1, int y1, int x2, int y2, int indexX, int indexy) {
 
@@ -133,14 +211,17 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
                 if ((indexX == 1) && (indexy == 2)) {
                     writeXOonButton(buttons[2][0], "O");
+                    showAlert("AI");
                 }
 
                 if ((indexX == 2) && (indexy == 2)) {
                     writeXOonButton(buttons[2][0], "O");
+                    showAlert("AI");
                 }
 
                 if ((indexX == 2) && (indexy == 1)) {
                     writeXOonButton(buttons[2][0], "O");
+                    showAlert("AI");
                 }
 
                 if ((indexX == 2) && (indexy == 0)) {
@@ -149,6 +230,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
                 if ((indexX == 1) && (indexy == 0)) {
                     writeXOonButton(buttons[2][0], "O");
+                    showAlert("AI");
                 }
 
             }
@@ -170,6 +252,25 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
         // For (1,0)จุดแรกที่เลือก
 
     }   // calculate
+
+    private void showAlert(String strWin) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(HardPlay3x3.this);
+        builder.setTitle("The Winner");
+        builder.setMessage("The Winner is " + strWin);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                //Restart Activity
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
+
+            }
+        });
+        builder.show();
+    }
 
     private void calculateByComTime2(int x1, int y1, int indexX, int indexY) {
 
