@@ -2,12 +2,10 @@ package com.example.momotaro.notetictactoe;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class EasyPlay3x3 extends AppCompatActivity implements View.OnClickListener {
 
@@ -82,20 +80,20 @@ public class EasyPlay3x3 extends AppCompatActivity implements View.OnClickListen
                     //For Write X on Button
                     writeXOonButton(buttons[i][i1], "X");
 
-                    Log.d("1MayV3", "buttonArrayList.size ==> ก่อนเลือก" + buttonArrayList.size());
-                    indexArrayList = findIndexArrayList(i, i1);
-                    Log.d("1MayV3", "indexArrayList ที่เลือก ==> " + indexArrayList);
-                    buttonArrayList.remove(indexArrayList);
-                    Log.d("1MayV3", "buttonArrayList.size ==> ที่เหลือ" + buttonArrayList.size());
-
-                    Button[] myButtons = buttonArrayList.toArray(new Button[buttonArrayList.size()]);
-
-                    Random random = new Random();
-                    int intRandom = random.nextInt(buttonArrayList.size());
-                    Log.d("1MayV3", "intRandom ==> " + intRandom);
-
-                    writeXOonButton(myButtons[intRandom], "O");
-                    buttonArrayList.remove(intRandom);
+//                    Log.d("1MayV3", "buttonArrayList.size ==> ก่อนเลือก" + buttonArrayList.size());
+//                    indexArrayList = findIndexArrayList(i, i1);
+//                    Log.d("1MayV3", "indexArrayList ที่เลือก ==> " + indexArrayList);
+//                    buttonArrayList.remove(indexArrayList);
+//                    Log.d("1MayV3", "buttonArrayList.size ==> ที่เหลือ" + buttonArrayList.size());
+//
+//                    Button[] myButtons = buttonArrayList.toArray(new Button[buttonArrayList.size()]);
+//
+//                    Random random = new Random();
+//                    int intRandom = random.nextInt(buttonArrayList.size());
+//                    Log.d("1MayV3", "intRandom ==> " + intRandom);
+//
+//                    writeXOonButton(myButtons[intRandom], "O");
+//                    buttonArrayList.remove(intRandom);
 
 
 
