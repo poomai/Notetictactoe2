@@ -28,6 +28,8 @@ public class Hard2Play3x3 extends AppCompatActivity implements View.OnClickListe
 
         writeXOonButton(buttons[1][1], "O");
 
+
+
     }   // Main Method
 
     private void writeXOonButton(Button btnClick, String strXO) {
