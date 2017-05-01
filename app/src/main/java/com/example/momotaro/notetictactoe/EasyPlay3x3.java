@@ -95,7 +95,7 @@ public class EasyPlay3x3 extends AppCompatActivity implements View.OnClickListen
                     Log.d("1MayV3", "intRandom ==> " + intRandom);
 
                     writeXOonButton(myButtons[intRandom], "O");
-                    
+                    buttonArrayList.remove(intRandom);
 
 
 
