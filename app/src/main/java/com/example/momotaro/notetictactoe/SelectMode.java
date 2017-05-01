@@ -42,6 +42,9 @@ public class SelectMode extends AppCompatActivity implements View.OnClickListene
 
         if (v == easyButton) {
 
+            Intent intent = new Intent(SelectMode.this, EasyPlay3x3.class);
+            startActivity(intent);
+
         }
 
         if (v == mediumButton) {
