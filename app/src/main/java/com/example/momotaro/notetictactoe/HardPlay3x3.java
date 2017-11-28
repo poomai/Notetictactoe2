@@ -29,7 +29,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_hard_play3x3);
 
         initialView();
-
+xcvxcvxcvxcv
         buttonController();
 
     }   // Main Method
