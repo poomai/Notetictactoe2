@@ -105,7 +105,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 calculateByComTime2(x1, y1, indexX, indexy);
 
                 break;
-            case 3:
+            case 3: // นี่คือการคลิกครั้ง สาม
 
                 x3 = indexX;
                 y3 = indexy;
@@ -113,7 +113,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 calculateByComTime3(x1, y1, x2, y2, indexX, indexy);
 
                 break;
-            case 4:
+            case 4: // นี่คือการคลิกครั้ง สี่
 
                 calculateByComTime4(x1, y1, x2, y2, x3, y3, indexX, indexy);
 
@@ -217,9 +217,9 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
 
         //For (0,0) จุดแรกที่เลือก  จุดที่สองที่เป็นไปได้(0,1), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
         if ((x1 == 0) && (y1 == 0)) {
-
+            // if1 จุดแรกที่เลือก (0,0)
             if ((x2 == 0) && (y2 == 1)) {
-                //คลิกครั้งที่สาม (1,2), (2,2), (2,1), (2,0), (1,0)
+                //คลิกครั้งที่สามเหลือ (1,2), (2,2), (2,1), (2,0), (1,0)
 
                 if ((indexX == 1) && (indexy == 2)) {
                     writeXOonButton(buttons[2][0], "O");
@@ -245,9 +245,10 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                     showAlert("AI");
                 }
 
-            }   // if2
+            }   // if1.1 For (0,0) > (0,1)
 
             if ((x2 == 0) && (y2 == 2)) {
+                //คลิกครั้งที่สามเหลือ (1,2), (2,2), (2,0), (1,0), (2,1)
 
                 if ((indexX == 1) && (indexy == 2)) {
                     writeXOonButton(buttons[2][1], "O");
@@ -273,14 +274,155 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                     writeXOonButton(buttons[1][0], "O");
                 }
 
-            }
+            } // if1.2 For (0,0) > (0,2)
 
+            if ((x2 == 1) && (y2 == 2)) {
+                //คลิกครั้งที่สามเหลือ (0,2), (2,2), (2,0), (1,0), (2,1)
 
+                if ((indexX == 0) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
 
-        }   // if1
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+            } // if1.3 For (0,0) > (1,2)
+
+            if ((x2 == 2) && (y2 == 2)) {
+                //คลิกครั้งที่สามเหลือ (0,2), (2,2), (2,0), (1,0), (2,1)
+
+                if ((indexX == 0) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 0)) {
+                    writeXOonButton(buttons[2][1], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+            } // if1.4 For (0,0) > (2,2)
+
+            if ((x2 == 2) && (y2 == 1)) {
+                //คลิกครั้งที่สามเหลือ (0,1), (0,2), (2,0), (2,2), (1,2)
+
+                if ((indexX == 0) && (indexy == 1)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 0) && (indexy == 2)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 0)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[2][0], "O");
+                }
+
+            } // if1.5 For (0,0) > (2,1)
+
+            if ((x2 == 2) && (y2 == 0)) {
+                //คลิกครั้งที่สามเหลือ (0,1), (0,2), (2,0), (2,2), (1,2)
+
+                if ((indexX == 0) && (indexy == 1)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 0) && (indexy == 2)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[1][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[0][1], "O");
+                }
+
+            } // if1.6 For (0,0) > (2,0)
+
+            if ((x2 == 1) && (y2 == 0)) {
+                //คลิกครั้งที่สามเหลือ (0,1), (0,2), (2,0), (2,2), (1,2)
+
+                if ((indexX == 0) && (indexy == 1)) {
+                    writeXOonButton(buttons[0][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 1) && (indexy == 2)) {
+                    writeXOonButton(buttons[0][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 1)) {
+                    writeXOonButton(buttons[0][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 2) && (indexy == 2)) {
+                    writeXOonButton(buttons[0][2], "O");
+                    showAlert("AI");
+                }
+
+                if ((indexX == 0) && (indexy == 2)) {
+                    writeXOonButton(buttons[0][1], "O");
+                }
+
+            } // if1.7 For (0,0) > (1,0)
+        }   // if1 จุดแรกที่เลือก (0,0)
 
         // For (0,1)จุดแรกที่เลือก  (0,0), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
-
 
 
 
@@ -358,7 +500,7 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 writeXOonButton(buttons[2][0], "O");
             }
 
-        }   // if1
+        }   // if1 For (0,0)
 
 
         //For (0,1) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,2), (1,2), (2,2), (2,1), (2,0), (1,0)
@@ -392,21 +534,210 @@ public class HardPlay3x3 extends AppCompatActivity implements View.OnClickListen
                 writeXOonButton(buttons[0][0], "O");
             }
 
-        }
+        }  // if2  For (0,1)
 
         //For (0,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (1,2), (2,2), (2,1), (2,0), (1,0)
         if ((x1 == 0) && (y1 == 2)) {
-        }
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[1][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+        } // if3  For (0,2)
 
         //For (1,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (2,2), (2,1), (2,0), (1,0)
 
+        if ((x1 == 1) && (y1 == 2)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[0][2], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[0][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+        } // if4 For (1,2)
+
         //For (2,2) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,1), (2,0), (1,0)
+
+        if ((x1 == 2) && (y1 == 2)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[1][2], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[0][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[2][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+        } // if5  For (2,2)
 
         //For (2,1) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,0), (1,0)
 
+        if ((x1 == 2) && (y1 == 1)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[2][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[2][0], "O");
+            }
+
+        } // if6 For (2,1)
+
         //For (2,0) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,1), (1,0)
 
+        if ((x1 == 2) && (y1 == 0)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[1][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[2][2], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 0)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+        } // if7 For (2,0)
+
         //For (1,0) จุดที่เป็นไปได้ที่จะคลิกครั้งที่สอง (0,0), (0,1), (0,2), (1,2), (2,2), (2,1), (2,0)
+
+        if ((x1 == 1) && (y1 == 0)) {
+
+            if ((indexX == 0) && (indexY == 0)) {
+                writeXOonButton(buttons[2][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 1)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 0) && (indexY == 2)) {
+                writeXOonButton(buttons[0][1], "O");
+            }
+
+            if ((indexX == 1) && (indexY == 2)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 2)) {
+                writeXOonButton(buttons[2][1], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 1)) {
+                writeXOonButton(buttons[2][0], "O");
+            }
+
+            if ((indexX == 2) && (indexY == 0)) {
+                writeXOonButton(buttons[0][0], "O");
+            }
+
+        } // if8 For (1,0)
 
     }   // calculate
 
