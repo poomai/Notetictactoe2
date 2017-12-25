@@ -1,11 +1,15 @@
 package com.example.momotaro.notetictactoe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 public class Hard2Play3x3 extends AppCompatActivity implements View.OnClickListener {
+
+    private Button backButton;
+    //ปุ่มย้อนกลับ
 
     private Button[][] buttons = new Button[3][3];
     private int[][] ints = new int[][]{
@@ -27,7 +31,7 @@ public class Hard2Play3x3 extends AppCompatActivity implements View.OnClickListe
         buttonController();
 
         writeXOonButton(buttons[1][1], "O");
-
+        //writeXOonButton(buttons[1][1], getColor() );
 
 
     }   // Main Method
@@ -47,6 +51,8 @@ public class Hard2Play3x3 extends AppCompatActivity implements View.OnClickListe
             }
         }
 
+        backButton.setOnClickListener(Hard2Play3x3.this);
+        //ปุ่มย้อนกลับ
     }   // buttonController
 
     private void initialView() {
@@ -56,11 +62,17 @@ public class Hard2Play3x3 extends AppCompatActivity implements View.OnClickListe
                 buttons[i][i1] = (Button) findViewById(ints[i][i1]);
             }   //for
         }   // for
-
+        backButton = (Button) findViewById(R.id.backbutton1);
+        //ปุ่นย้อนกลับ
     }   // initial
 
     @Override
     public void onClick(View view) {
 
+        if (view == backButton) {
+            Intent intent = new Intent(Hard2Play3x3.this, SelectMode.class);
+            startActivity(intent);
+        }
+        //ปุ่นย้อนกลับ
     }
 }   // Main Class

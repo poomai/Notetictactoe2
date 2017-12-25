@@ -43,16 +43,12 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         if (v == humanButton) {
             Intent intent = new Intent(FirstActivity.this, MainActivity.class);
             startActivity(intent);
-
         }
 
         //For com
-
-
         if (v == comButton) {
             Intent intent = new Intent(FirstActivity.this, SelectMode.class);
             startActivity(intent);
-
         }
     }
 } //Main Class

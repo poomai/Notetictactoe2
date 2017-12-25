@@ -5,4 +5,5 @@
     <string name="easy">ง่าย</string>
     <string name="medium">ปานกลาง</string>
     <string name="hard">ยาก</string>
+    <color name="yellow">#efe100</color>
 </resources>

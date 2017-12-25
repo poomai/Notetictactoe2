@@ -42,10 +42,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //For 3x3
         if (v == tic3x3Button) {
 
-        }//For 5x5
+
+
+        }
+
+        //For 5x5
         if (v == tic5x5Button) {
 
-        }//For 7x7
+        }
+
+
+        //For 7x7
         if (v == tic7x7Button) {
         }
 

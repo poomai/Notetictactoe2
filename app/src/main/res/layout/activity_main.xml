@@ -16,19 +16,20 @@
             android:id="@+id/btn3x3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tic-Tac-Tec 3x3" />
+            android:text="3x3" />
 
         <Button
             android:id="@+id/btn5x5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tic-Tac-Tec 5x5" />
+            android:text="5x5" />
 
         <Button
             android:id="@+id/btn7x7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tic-Tac-Tec 7x7" />
+            android:text="7x7" />
+
 
     </LinearLayout>
 

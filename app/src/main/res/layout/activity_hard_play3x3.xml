@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/icon"
     tools:context="com.example.momotaro.notetictactoe.HardPlay3x3">
 
     <LinearLayout
-        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="@dimen/padding">
 
@@ -21,18 +24,21 @@
                 android:id="@+id/btn3x11"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
+                android:textColor="#ff0000"
                 android:textSize="@dimen/h1" />
 
             <Button
                 android:id="@+id/btn3x12"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
+                android:textColor="#0004ff"
                 android:textSize="@dimen/h1" />
 
             <Button
                 android:id="@+id/btn3x13"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
+                android:textColor="#ff0004"
                 android:textSize="@dimen/h1" />
 
         </LinearLayout>
@@ -46,19 +52,25 @@
                 android:id="@+id/btn3x21"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
             <Button
                 android:id="@+id/btn3x22"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
             <Button
                 android:id="@+id/btn3x23"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
         </LinearLayout>
 
@@ -71,23 +83,73 @@
                 android:id="@+id/btn3x31"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
             <Button
                 android:id="@+id/btn3x32"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
             <Button
                 android:id="@+id/btn3x33"
                 android:layout_width="@dimen/h0"
                 android:layout_height="@dimen/h0"
-                android:textSize="@dimen/h1" />
+                android:textSize="@dimen/h1"
+
+                />
 
         </LinearLayout>
 
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_marginTop="37dp"
+            android:layout_weight="0.14"
+            android:text="ผู้เล่นเริ่มก่อน"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/backbutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_below="@+id/linearLayout"
+            android:layout_weight="0.09"
+            android:text="ย้อนกลับ"
+            android:textSize="20sp" />
+    </LinearLayout>
+
 
 </RelativeLayout>

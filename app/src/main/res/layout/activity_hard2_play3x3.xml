@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/icon"
     tools:context="com.example.momotaro.notetictactoe.Hard2Play3x3">
 
+
     <LinearLayout
-        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="@dimen/padding">
 
@@ -87,7 +90,48 @@
 
         </LinearLayout>
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_marginTop="37dp"
+            android:layout_weight="0.14"
+            android:text="AIเริ่มก่อน"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/backbutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_alignStart="@+id/linearLayout"
+            android:layout_below="@+id/linearLayout"
+            android:layout_weight="0.09"
+            android:text="ย้อนกลับ"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

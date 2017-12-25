@@ -4,26 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.example.momotaro.notetictactoe.FirstActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="48dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btnHuman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/human" />
+            android:text="PLAYER VS PLAYER" />
 
         <Button
             android:id="@+id/btnCom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/com" />
-
+            android:text="PLAYER VS ANDROID" />
     </LinearLayout>
+
+
 </RelativeLayout>
